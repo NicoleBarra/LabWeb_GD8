@@ -1,6 +1,6 @@
 const assert = require('assert');
 const VectorCalculator = require('../app/models/VectorCalculator');
-//const BankAccount = require('../app/models/BankAccount');
+const BankAccount = require('../app/models/BankAccount');
 
 describe('Object', () => {
     let a = {x:1,y:2};
@@ -30,25 +30,25 @@ describe('Object', () => {
         })
       })
 
-      /*
+      
 
       describe('current', () => {
         it('Obtiene el dinero actual en la cuenta', () => {
-          let bankA = BankAccount(3300.0,["substracted 200.0", "appended 1000.0"]);
+          let bankA = new BankAccount(3300.0,["substract 200.0", "append 1000.0"]);
           assert.deepStrictEqual(3300.0, bankA.getCurrent());
         })
       })
 
       describe('append', () => {
         it('Agrega el valor especificado al dinero actual en la cuenta', () => {
-          let bankB = BankAccount(300.0,["substracted 200.0", "appended 1000.0"]);
+          let bankB = new BankAccount(300.0,["substract 200.0", "append 1000.0"]);
           assert.deepStrictEqual(500.0, bankB.append(200.0));
         })
       })
 
       describe('substract', () => {
         it('Resta el valor especificado al dinero actual en la cuenta', () => {
-          let bankC = BankAccount(5000.0,["substracted 200.0", "appended 1000.0"]);
+          let bankC = new BankAccount(5000.0,["substract 200.0", "append 1000.0"]);
           assert.deepStrictEqual(2000.0, bankC.substract(3000.0));
         })
       })
@@ -56,11 +56,11 @@ describe('Object', () => {
       describe('merge', () => {
         it('Junta historiales y saldo caso original mayor', () => {
 
-            let bankDA = BankAccount(300,["substracted 200.0", "appended 1000.0"]);
-            let bankDB = BankAccount(300,["substracted 20.0", "appended 2000.0"]);
+            let bankDA = new BankAccount(300,["substract 200.0", "append 1000.0"]);
+            let bankDB = new BankAccount(300,["substract 20.0", "append 2000.0"]);
             bankDA.merge(bankDB);
             
-            assert.deepStrictEqual(["substracted 200.0", "appended 1000.0", "substracted 20.0", "appended 2000.0"], banDA.getHistory());
+            assert.deepStrictEqual(["substract 200.0", "append 1000.0", "substract 20.0", "append 2000.0"], bankDA.getHistory());
             assert.deepStrictEqual(600, bankDA.getCurrent());
         })
       })
@@ -68,11 +68,11 @@ describe('Object', () => {
       describe('history', () => {
         it('Regresa un arreglo de objetos con el historial de movimientos de la cuenta. ', () => {
 
-            let bankE = BankAccount(300,["substracted 200.0", "appended 1000.0"]);
+            let bankE = new BankAccount(300,["substract 200.0", "append 1000.0"]);
 
-          assert.deepStrictEqual(["substracted 200.0", "appended 1000.0"], bankE.getHistory());
+          assert.deepStrictEqual(["substract 200.0", "append 1000.0"], bankE.getHistory());
         })
       })
-      */
+      
 
 });

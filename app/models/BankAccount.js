@@ -1,9 +1,9 @@
 class BankAccount {
     constructor(current, history) {
         this.current = current;
-        this.history = history;
+        this.history = history; 
     }
-}
+
 
 getCurrent() {
     return this.current;
@@ -11,36 +11,41 @@ getCurrent() {
 
 append(ammount) {
     if (ammount < 0) {
-        return current;
+        return this.current;
     }
     else{
-        current = current + ammount;
-        history.append("append " + ammount);
-        return current;
+        this.current = this.current + ammount;
+        this.history.push("append " + ammount);
+        return this.current;
     }
 } 
 
 substract(ammount) {
     if (ammount < 0) {
-        return current;
+        return this.current;
     }
     else{
-        current = current + ammount;
-        history.append("append " + ammount);
-        return current;
+        this.current = this.current - ammount;
+        this.history.push("substract " + ammount);
+        return this.current;
     }
 } 
 
 getHistory()  {
-    return history;
+    return this.history;
 }
 
-mergeAccounts(bankB) {
+merge(bankB) {
     if (bankB.getCurrent() < 0) {
         this.current = this.current + bankB.current;
     }
     else{
         this.current = this.current + bankB.current;
     }
-    this.history.append(bankB.getHistory());
+    for(let value of bankB.getHistory()){
+        this.history.push(value)
+    }
 }
+}
+
+module.exports = BankAccount; 
