@@ -1,9 +1,6 @@
 class BankAccount {
-    constructor(current, append, substract, merge, history) {
+    constructor(current, history) {
         this.current = current;
-        this.append = append;
-        this.substract = substract;
-        this.merge = merge;
         this.history = history;
     }
 }
@@ -20,7 +17,7 @@ substract(ammount) {
     return;
 } 
 
-mergeAccounts() {
+mergeAccounts(bankB) {
     return;
 }
 
