@@ -1,0 +1,23 @@
+{
+  "name": "LabWeb_GD8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoleBarra/LabWeb_GD8.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoleBarra/LabWeb_GD8/issues"
+  },
+  "homepage": "https://github.com/NicoleBarra/LabWeb_GD8#readme",
+  "dependencies": {
+    "mocha": "^8.2.0"
+  }
+}
