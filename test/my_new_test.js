@@ -1,14 +1,10 @@
 const assert = require('assert');
 const VectorCalculator = require('../app/models/VectorCalculator');
-const BankAccount = require('../app/models/BankAccount');
+//const BankAccount = require('../app/models/BankAccount');
 
 describe('Object', () => {
     let a = {x:1,y:2};
     let b = {x:3,y:7};
-
-    let BankAccountA = BankAccount(3300.0, []);
-    let BankAccountB = BankAccount(300.0, []);
-    let BankAccountC = BankAccount(5000.0, []);
 
     describe('sum', () => {
         it('Suma los vectores de a y b', () => {
@@ -33,6 +29,8 @@ describe('Object', () => {
           assert.deepStrictEqual(17, VectorCalculator.dot(a,b));
         })
       })
+
+      /*
 
       describe('current', () => {
         it('Obtiene el dinero actual en la cuenta', () => {
@@ -75,5 +73,6 @@ describe('Object', () => {
           assert.deepStrictEqual(["substracted 200.0", "appended 1000.0"], bankE.getHistory());
         })
       })
+      */
 
 });
